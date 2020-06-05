@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/01 19:27:19 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/05 23:26:38 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/06 00:37:36 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,4 +92,9 @@ int	ft_put_p(t_list *list, unsigned long int ulnb)
 	if (list->width > length_ulnb)
 		return (list->width);
 	return (length_ulnb);
+}
+
+int	ft_putnull(t_list *list)
+{
+	return (list->precision);
 }
