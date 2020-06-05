@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/01 19:27:19 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/05 20:52:26 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/05 21:24:25 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	ft_count_x_bigx(t_list *list, unsigned long int ulnb)
 	int char_count;
 
 	char_count = ft_length_h(ulnb);
+	if (list->withprecision && list->precision == 0 && ulnb == 0)
+		char_count = 0;
 	if (list->width > char_count)
 		char_count = list->width;
 	if (list->withprecision && list->precision > char_count)

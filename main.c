@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/02 15:48:58 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/05 20:55:38 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/05 21:15:07 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -194,4 +194,6 @@ int main()
 	printf("%d\n", printf("67)\ts%5.0us\t", 0));
 	printf("%d\n", ft_printf("68)\ts%08.5xs\t", 0));
 	printf("%d\n", printf("68)\ts%08.5xs\t", 0));
+	printf("%d\n", ft_printf("69)\ts%.0xs\t", 0));
+	printf("%d\n", printf("69)\ts%.0xs\t", 0));
 }
