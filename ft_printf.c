@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/25 18:12:13 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/03 21:59:05 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/05 23:49:41 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,8 @@ int	ft_extract_data_format(t_list *list, const char **format,
 		format_1++;
 		list->withprecision = 1;
 	}
-	list->precision = ft_extract_number(&format_1, lst_format);
+	if ((list->precision = ft_extract_number(&format_1, lst_format)) < 0)
+		list->withprecision = 0;
 	*format = format_1;
 	c = ft_convert(lst_format, *format_1, list);
 	return (c);
