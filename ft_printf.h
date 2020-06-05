@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/27 18:47:13 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/06 00:54:16 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/06 00:56:53 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ t_list				*ft_ini_list(void);
 int					ft_indic(char c, t_list *list);
 void				ft_putnbr(int nb);
 void				ft_putnbr_u(unsigned int nb);
-void				ft_putchar(char s);
+void				ft_putchar(unsigned char s);
 void				ft_puthexa(unsigned long int nb);
 void				ft_puthexa_m(unsigned long int nb);
 int					ft_convert(va_list lst_format, char c, t_list *list);
