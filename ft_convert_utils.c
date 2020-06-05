@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/31 18:20:47 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/05 19:53:45 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/05 20:02:38 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ int	ft_count_d_i(t_list *list, int nb)
 	if (width > 0)
 		char_count = char_count + width;
 	char_count = char_count + ft_length_nb(nb);
+	if (list->withprecision && list->precision == 0 && nb == 0 && !list->width)
+		char_count = 0;
 	return (char_count);
 }
 
