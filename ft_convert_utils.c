@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/31 18:20:47 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/06 00:40:46 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/06 00:47:06 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ int	ft_put_s(t_list *list, char *s)
 
 	i = 0;
 	if (s == NULL)
-		return (ft_putnull(list));
+		return (ft_put_s(list, "(null)"));
 	if (ft_strlen(s) > (size_t)list->precision && list->withprecision)
 		width = list->width - list->precision;
 	else
