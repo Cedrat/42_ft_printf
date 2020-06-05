@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/25 18:12:13 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/05 23:49:41 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/06 00:28:20 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,8 @@ int	ft_printf(const char *format, ...)
 			wc = wc + ft_extract_data_format(list, &format, lst_format);
 			free(list);
 		}
-		format++;
+		if (*format)
+			format++;
 	}
 	return (wc);
 }
