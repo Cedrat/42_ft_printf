@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/02 15:48:58 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/05 17:04:06 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/05 17:54:18 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ int main()
 	printf("%d\n", printf("16)\t%5ds\t", 245));
 	printf("%d\n", ft_printf("17)\t%-5ds\t", 245));
 	printf("%d\n", printf("17)\t%-5ds\t", 245));
+	printf("%d\n", ft_printf("17.5)\t%8.5ds\t", 0));
+	printf("%d\n", printf("17.5)\t%8.5ds\t", 0));
 	printf("%d\n", ft_printf("18)\t%-5.2ds\t", 245));
 	printf("%d\n", printf("18)\t%-5.2ds\t", 245));
 	printf("%d\n", ft_printf("18.5)\t%*ds\t", -3 , 2));
