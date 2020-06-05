@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/02 15:48:58 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/06 00:08:52 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/06 01:26:08 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -202,7 +202,11 @@ int main()
 	//printf("%d\n", printf("71)\ts%5.5ss\t", NULL));
 	printf("%d\n", ft_printf("72)\ts%.*s\t", -2147483645 ,"Caillou"));
 	printf("%d\n", printf("72)\ts%.*s\t", -2147483645 ,"Caillou"));
-	printf("%d\n", ft_printf("72)\ts%3%s\t"));
-	printf("%d\n", printf("72)\ts%3%s\t"));
+	printf("%d\n", ft_printf("73)\ts%3%s\t"));
+	printf("%d\n", printf("73)\ts%3%s\t"));
+	printf("%d\n", ft_printf("74)\t%u\t", 4294967295));
+	printf("%d\n", printf("74)\t%u\t", 4294967295));
+	printf("%d\n", ft_printf("74)\t%x\t", 18446744073709551615));
+	printf("%d\n", printf("74)\t%x\t", 18446744073709551615));
 
 }

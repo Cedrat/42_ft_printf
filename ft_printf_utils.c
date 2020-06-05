@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/26 21:32:46 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/03 21:54:11 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/06 01:42:45 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,14 +67,26 @@ void	ft_putadr(unsigned long int nb)
 	if (nb)
 	{
 		ft_putstr("0x");
-		ft_puthexa(nb);
+		ft_puthexa_ul(nb);
 	}
 }
 
-void	ft_hexa_r(unsigned long int nb)
+void	ft_hexa_r(unsigned int nb)
 {
 	if (nb == 0)
 		ft_putchar('0');
 	else
-		ft_puthexa(nb);
+		ft_puthexa_u(nb);
+}
+
+void	ft_puthexa_ul(unsigned long int nb)
+{
+	if (nb)
+	{
+		ft_puthexa_ul(nb / 16);
+		if (nb % 16 < 10)
+			ft_putnbr(nb % 16);
+		else
+			ft_putchar(nb % 16 + 'a' - 10);
+	}
 }

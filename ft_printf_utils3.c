@@ -6,25 +6,25 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/03 21:48:19 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/05 18:30:12 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/06 01:44:03 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_hexa_mr(unsigned long int nb)
+void	ft_hexa_mr(unsigned int nb)
 {
 	if (nb == 0)
 		ft_putchar('0');
 	else
-		ft_puthexa_m(nb);
+		ft_puthexa_um(nb);
 }
 
-void	ft_puthexa(unsigned long int nb)
+void	ft_puthexa_u(unsigned int nb)
 {
 	if (nb)
 	{
-		ft_puthexa(nb / 16);
+		ft_puthexa_u(nb / 16);
 		if (nb % 16 < 10)
 			ft_putnbr(nb % 16);
 		else
@@ -32,11 +32,11 @@ void	ft_puthexa(unsigned long int nb)
 	}
 }
 
-void	ft_puthexa_m(unsigned long int nb)
+void	ft_puthexa_um(unsigned int nb)
 {
 	if (nb)
 	{
-		ft_puthexa_m(nb / 16);
+		ft_puthexa_um(nb / 16);
 		if (nb % 16 < 10)
 			ft_putnbr(nb % 16);
 		else

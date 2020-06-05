@@ -6,13 +6,13 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/01 19:27:19 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/06 01:04:54 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/06 01:36:30 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_count_x_bigx(t_list *list, unsigned long int ulnb)
+int	ft_count_x_bigx(t_list *list, unsigned int ulnb)
 {
 	int char_count;
 

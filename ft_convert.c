@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/28 18:19:42 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/06 00:23:24 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/06 01:48:50 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,8 @@ int	ft_convert(va_list lst_format, char c, t_list *list)
 
 int	ft_convert2(va_list lst_format, char c, t_list *list)
 {
-	unsigned long int ulnb;
+	unsigned long int	ulnb;
+	unsigned int		unb;
 
 	if (c == 'p')
 	{
@@ -49,13 +50,13 @@ int	ft_convert2(va_list lst_format, char c, t_list *list)
 	}
 	else if (c == 'x')
 	{
-		ulnb = (unsigned long int)va_arg(lst_format, unsigned long int);
-		return (ft_put_x_bigx(list, ulnb, ft_hexa_r));
+		unb = (unsigned long int)va_arg(lst_format, unsigned int);
+		return (ft_put_x_bigx(list, unb, ft_hexa_r));
 	}
 	else if (c == 'X')
 	{
-		ulnb = (unsigned long int)va_arg(lst_format, unsigned long int);
-		return (ft_put_x_bigx(list, ulnb, ft_hexa_mr));
+		unb = (unsigned long int)va_arg(lst_format, unsigned int);
+		return (ft_put_x_bigx(list, unb, ft_hexa_mr));
 	}
 	else
 		return (ft_convert3(lst_format, c, list));
@@ -64,8 +65,8 @@ int	ft_convert2(va_list lst_format, char c, t_list *list)
 
 int	ft_convert3(va_list lst_format, char c, t_list *list)
 {
-	unsigned int unb;
-	char	e;
+	unsigned int	unb;
+	char			e;
 
 	if (c == 'u')
 	{

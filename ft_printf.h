@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/27 18:47:13 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/06 01:01:13 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/06 01:52:02 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,21 +39,23 @@ int					ft_indic(char c, t_list *list);
 void				ft_putnbr(int nb);
 void				ft_putnbr_u(unsigned int nb);
 void				ft_putchar(char s);
-void				ft_puthexa(unsigned long int nb);
-void				ft_puthexa_m(unsigned long int nb);
+void				ft_puthexa_u(unsigned int nb);
+void				ft_puthexa_um(unsigned int nb);
 int					ft_convert(va_list lst_format, char c, t_list *list);
 int					ft_convert2(va_list lst_format, char c, t_list *list);
 void				ft_putstr(char *s);
 void				ft_putadr(unsigned long int nb);
-void				ft_hexa_mr(unsigned long int nb);
-void				ft_hexa_r(unsigned long int nb);
+void				ft_hexa_mr(unsigned int nb);
+void				ft_hexa_r(unsigned int nb);
 int					ft_put_d_i(t_list *list, int nb);
-int					ft_put_x_bigx(t_list *list, size_t ulnb, void (*f)(size_t));
-int					ft_count_x_bigx(t_list *list, unsigned long int ulnb);
+int					ft_put_x_bigx(t_list *list, unsigned int ulnb,
+										void (*f)(unsigned int));
+int					ft_count_x_bigx(t_list *list, unsigned int ulnb);
 int					ft_put_u(t_list *list, unsigned int unb);
 int					ft_count_u(t_list *list, unsigned int unb);
 int					ft_put_p(t_list *list, unsigned long int ulnb);
 int					ft_convert3(va_list lst_format, char c, t_list *list);
 int					ft_printf(const char *format, ...);
+void				ft_puthexa_ul(unsigned long int nb);
 
 #endif

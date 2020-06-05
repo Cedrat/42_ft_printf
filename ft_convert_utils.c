@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/31 18:20:47 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/06 00:59:21 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/06 01:29:30 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ int	ft_put_s(t_list *list, char *s)
 	return (i + width);
 }
 
-int	ft_put_x_bigx(t_list *list, size_t ulnb, void (*f)(size_t))
+int	ft_put_x_bigx(t_list *list, unsigned int ulnb, void (*f)(unsigned int))
 {
 	int width;
 	int precision;
