@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/28 18:19:42 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/06 00:12:51 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/06 00:23:24 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_convert(va_list lst_format, char c, t_list *list)
 	if (c == 'c')
 	{
 		e = (int)va_arg(lst_format, int);
-		return (ft_put_c(list, e));
+		return (ft_put_c(list, e, 'c'));
 	}
 	else if (c == 's')
 	{
@@ -75,7 +75,7 @@ int	ft_convert3(va_list lst_format, char c, t_list *list)
 	else if (c == '%')
 	{
 		e = '%';
-		return (ft_put_c(list, e));
+		return (ft_put_c(list, e, '%'));
 	}
 	else
 		return (0);

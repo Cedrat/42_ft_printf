@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/31 18:20:47 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/06 00:16:47 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/06 00:22:38 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,11 +63,11 @@ int	ft_put_d_i(t_list *list, int nb)
 	return (ft_count_d_i(list, nb));
 }
 
-int	ft_put_c(t_list *list, char c)
+int	ft_put_c(t_list *list, char c, int i)
 {
-	if (list->indic == '0' || list->indic == -1 && c != '%')
+	if ((list->indic == '0' && i == 'c') || list->indic == -1)
 		ft_write_x(' ', list->width - 1);
-	else if (list->indic == '0')
+	else if (list->indic == '0' && i == '%')
 		ft_write_x('0', list->width - 1);
 	ft_putchar(c);
 	if (list->indic == '-')
