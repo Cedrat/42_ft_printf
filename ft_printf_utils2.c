@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/03 21:44:49 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/06 00:57:09 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/06 00:58:33 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ size_t	ft_strlen(const char *s)
 	return (pos);
 }
 
-void	ft_putchar(unsigned char s)
+void	ft_putchar(char s)
 {
 	write(1, &s, 1);
 }

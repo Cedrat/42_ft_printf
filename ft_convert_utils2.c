@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/01 19:27:19 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/06 00:37:36 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/06 01:00:49 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,8 @@ int	ft_put_p(t_list *list, unsigned long int ulnb)
 	return (length_ulnb);
 }
 
-int	ft_putnull(t_list *list)
+int	ft_putnull_c(t_list *list)
 {
+	write(1, "\x00", 1);
 	return (list->precision);
 }
