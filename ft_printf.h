@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/27 18:47:13 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/06 00:36:27 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/06 00:54:16 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ typedef struct		s_list
 }					t_list;
 
 int					ft_length_h(unsigned long	int	nb);
-int					ft_put_c(t_list *list, char c, int i);
+int					ft_put_c(t_list *list, unsigned char c, int i);
 int					ft_put_s(t_list *list, char *s);
 int					ft_putnull(t_list *list);
 int					ft_length_nb(int nb);
