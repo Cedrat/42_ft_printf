@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/03 21:44:49 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/05 20:08:28 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/05 20:56:41 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ int		ft_length_h(size_t nb)
 	int i;
 
 	i = 0;
-
+	if (nb == 0)
+		return (1);
 	while (nb)
 	{
 		i++;

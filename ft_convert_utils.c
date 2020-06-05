@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/31 18:20:47 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/05 20:06:49 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/05 20:58:35 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,20 +105,22 @@ int	ft_put_x_bigx(t_list *list, size_t ulnb, void (*f)(size_t))
 	int width;
 	int precision;
 
+	if (list->indic == '0' && list->withprecision)
+		list->indic = -1;
 	precision = list->precision - ft_length_h(ulnb);
 	if (precision > 0)
 		width = list->width - list->precision;
 	else
 		width = list->width - ft_length_h(ulnb);
-	if (ulnb == 0 && !(list->withprecision && list->precision == 0))
-		width = width - 1;
+	if (list->width && list->precision == 0 && list->withprecision)
+		width++;
 	if (list->indic == '0')
 		ft_write_x('0', width);
 	else if (list->indic == -1)
 		ft_write_x(' ', width);
 	if (list->withprecision)
 		ft_write_x('0', precision);
-	if (ulnb != 0 || !list->withprecision)
+	if (ulnb != 0 || !(list->withprecision == 1 && list->precision == 0))
 		(*f)(ulnb);
 	if (list->indic == '-')
 		ft_write_x(' ', width);
