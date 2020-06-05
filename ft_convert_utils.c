@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/31 18:20:47 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/05 19:33:00 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/05 19:53:45 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,13 @@ int	ft_put_d_i(t_list *list, int nb)
 	int width;
 	int precision;
 
+	if (list->indic == '0' && list->withprecision)
+		list->indic = -1;
 	if (nb < 0 && list->withprecision)
 		list->precision++;
 	precision = list->precision - ft_length_nb(nb);
-	if (precision >= 0 && list->withprecision)
-		width = list->width - list->precision;
-	else
-		width = list->width - ft_length_nb(nb);
+	width = (precision >= 0 && list->withprecision)
+		? list->width - list->precision : list->width - ft_length_nb(nb);
 	if (width && list->precision == 0 && list->withprecision && nb == 0)
 		width++;
 	if (list->indic == -1)
@@ -80,7 +80,7 @@ int	ft_put_s(t_list *list, char *s)
 	int width;
 
 	i = 0;
-	if (ft_strlen(s) > (size_t) list->precision && list->withprecision)
+	if (ft_strlen(s) > (size_t)list->precision && list->withprecision)
 		width = list->width - list->precision;
 	else
 		width = list->width - ft_strlen(s);

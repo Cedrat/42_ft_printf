@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/02 15:48:58 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/05 17:54:18 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/05 19:41:46 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,8 @@ int main()
 	printf("%d\n", printf("19.87)\t%-15.13ds\t", -2147483647));
 	printf("%d\n", ft_printf("20)\t%5ds\t", -245));
 	printf("%d\n", printf("20)\t%5ds\t", -245));
+	printf("%d\n", ft_printf("20.5)\t%08.5i\t", -245));
+	printf("%d\n", printf("20.5)\t%08.5i\t", -245));
 	printf("%d\n", ft_printf("21)\t%-5ds\t", -245));
 	printf("%d\n", printf("21)\t%-5ds\t", -245));
 	printf("%d\n", ft_printf("22)\t%-5.10ds\t", -245));
