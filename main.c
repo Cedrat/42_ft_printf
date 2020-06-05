@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/02 15:48:58 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/04 17:11:29 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/05 17:04:06 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,10 @@ int main()
 	printf("%d\n", printf("5)\t%-5cs\t", 'e'));
 	printf("%d\n", ft_printf("6)\t%-6ss\t", "test"));
 	printf("%d\n", printf("6)\t%-6ss\t", "test"));
-	printf("%d\n", ft_printf("6)\t%ss%s\t", "tt" , "tes2"));
-	printf("%d\n", printf("6)\t%ss%s\t", "tt", "tes2"));
+	printf("%d\n", ft_printf("6.5)\t%-8.6ss\t", "testicule"));
+	printf("%d\n", printf("6.5)\t%-8.6ss\t", "testicule"));
+	printf("%d\n", ft_printf("6.75)\t%ss%s\t", "tt" , "tes2"));
+	printf("%d\n", printf("6.75)\t%ss%s\t", "tt", "tes2"));
 	printf("%d\n", printf("7)\t%5ss\t", "test"));
 	printf("%d\n", ft_printf("7)\t%5ss\t", "test"));
 	printf("%d\n", printf("7.5)\t%.0ss\t", "test"));

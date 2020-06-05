@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/31 18:20:47 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/04 16:15:37 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/05 17:45:24 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,21 +79,25 @@ int	ft_put_c(t_list *list, char c)
 int	ft_put_s(t_list *list, char *s)
 {
 	int i;
+	int width;
 
 	i = 0;
+	if (ft_strlen(s) > (size_t) list->precision && list->withprecision)
+		width = list->width - list->precision;
+	else
+		width = list->width - ft_strlen(s);
+	if (width < 0)
+		width = 0;
 	if (list->indic == '0' || list->indic == -1)
-		ft_write_x(' ', list->width - ft_strlen(s));
+		ft_write_x(' ', width);
 	while (s[i] && (list->precision > i || list->withprecision == 0))
 	{
 		ft_putchar(s[i]);
 		i++;
 	}
 	if (list->indic == '-')
-		ft_write_x(' ', list->width - ft_strlen(s));
-	if ((size_t)list->width > ft_strlen(s))
-		return (list->width);
-	else
-		return (i);
+		ft_write_x(' ', width);
+	return (i + width);
 }
 
 int	ft_put_x_bigx(t_list *list, size_t ulnb, void (*f)(size_t))
