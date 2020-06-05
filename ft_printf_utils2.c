@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/03 21:44:49 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/05 18:25:49 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/05 20:08:28 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ int		ft_length_u(unsigned int ui)
 	int i;
 
 	i = 0;
+	if (ui == 0)
+		return (1);
 	while (ui)
 	{
 		i++;

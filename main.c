@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/02 15:48:58 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/05 19:59:59 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/05 20:10:06 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -178,6 +178,8 @@ int main()
 	printf("%d\n", printf("59)\t%05xs\t", -245));
 	printf("%d\n", ft_printf("60)\t%05xs\t", -1));
 	printf("%d\n", printf("60)\t%05xs\t", -1));
+	printf("%d\n", ft_printf("61)this %u number", 0));
+	printf("%d\n", printf("61)this %u number", 0));
 	printf("%d\n", ft_printf("62)%.i", 0));
 	printf("%d\n", printf("62)%.i", 0));
 }
