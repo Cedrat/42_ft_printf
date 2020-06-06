@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/01 19:27:19 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/06 01:36:30 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/06 17:08:25 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int	ft_count_x_bigx(t_list *list, unsigned int ulnb)
 		char_count = list->width;
 	if (list->withprecision && list->precision > char_count)
 		char_count = list->precision;
+	if (list->withprecision && list->precision == 0 && ulnb == 0 && list->width)
+		char_count--;
 	return (char_count);
 }
 
@@ -34,12 +36,13 @@ int	ft_put_u(t_list *list, unsigned int unb)
 	precision = list->precision - ft_length_u(unb);
 	if (list->indic == '0' && list->withprecision)
 		list->indic = -1;
+	if ((list->width < ft_length_u(unb) || unb == 0)
+					&& list->precision == 0 && list->withprecision)
+		list->width++;
 	if (precision > 0)
 		width = list->width - list->precision;
 	else
 		width = list->width - ft_length_u(unb);
-	if (list->width && list->precision == 0 && list->withprecision)
-		width++;
 	if (list->indic == '0')
 		ft_write_x('0', width);
 	else if (list->indic == -1)
@@ -64,6 +67,8 @@ int	ft_count_u(t_list *list, unsigned int unb)
 		char_count = list->precision;
 	if (list->withprecision && list->precision == 0 && unb == 0 && !list->width)
 		char_count = 0;
+	if (list->withprecision && list->precision == 0 && unb == 0 && list->width)
+		char_count--;
 	return (char_count);
 }
 
