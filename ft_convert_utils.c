@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/31 18:20:47 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/06 17:07:29 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/08 00:35:55 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,8 +114,7 @@ int	ft_put_x_bigx(t_list *list, unsigned int ulnb, void (*f)(unsigned int))
 	if (list->indic == '0' && list->withprecision)
 		list->indic = -1;
 	precision = list->precision - ft_length_h(ulnb);
-	if ((list->width < ft_length_u(ulnb) || ulnb == 0)
-					&& list->precision == 0 && list->withprecision)
+	if (ulnb == 0 && list->precision == 0 && list->withprecision)
 		list->width++;
 	if (precision > 0)
 		width = list->width - list->precision;
