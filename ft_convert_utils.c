@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/31 18:20:47 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/08 00:35:55 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/08 16:08:48 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ int	ft_count_d_i(t_list *list, int nb)
 	if (width > 0)
 		char_count = char_count + width;
 	char_count = char_count + ft_length_nb(nb);
-	if (list->withprecision && list->precision == 0 && nb == 0 && !list->width)
-		char_count = 0;
+	if (list->withprecision && list->precision == 0 && nb == 0 && list->width)
+		char_count--;
 	return (char_count);
 }
 
@@ -41,13 +41,13 @@ int	ft_put_d_i(t_list *list, int nb)
 
 	if (list->indic == '0' && list->withprecision)
 		list->indic = -1;
-	if (nb < 0 && list->withprecision)
+	if (nb < 0 && list->withprecision && list->precision)
 		list->precision++;
+	if (nb <= 0 && list->withprecision && list->precision == 0)
+		list->width++;
 	precision = list->precision - ft_length_nb(nb);
 	width = (precision >= 0 && list->withprecision)
 		? list->width - list->precision : list->width - ft_length_nb(nb);
-	if (width && list->precision == 0 && list->withprecision && nb == 0)
-		width++;
 	if (list->indic == -1)
 		ft_write_x(' ', width);
 	if (nb < 0)
