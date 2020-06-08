@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/02 15:48:58 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/08 15:45:07 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/08 17:02:06 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -216,6 +216,8 @@ int main()
 	printf("	---- Return = %d ----\n", ft_printf("%*.*u", -50,-5, 2147483647));
 	printf("	---- Return = %d ----\n", printf("s%1.0ds", 0));
 	printf("	---- Return = %d ----\n", ft_printf("s%1.0ds", 0));
+	printf("	---- Return = %d ----\n", printf("s%-15.0ds", -55));
+	printf("	---- Return = %d ----\n", ft_printf("s%-15.0ds",-55));
 
 
 

@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/31 18:20:47 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/08 16:08:48 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/08 17:04:00 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	ft_put_d_i(t_list *list, int nb)
 		list->indic = -1;
 	if (nb < 0 && list->withprecision && list->precision)
 		list->precision++;
-	if (nb <= 0 && list->withprecision && list->precision == 0)
+	if (nb == 0 && list->withprecision && list->precision == 0)
 		list->width++;
 	precision = list->precision - ft_length_nb(nb);
 	width = (precision >= 0 && list->withprecision)
