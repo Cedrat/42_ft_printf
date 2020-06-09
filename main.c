@@ -6,7 +6,7 @@
 /*   By: lnoaille <lnoaille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/02 15:48:58 by lnoaille          #+#    #+#             */
-/*   Updated: 2020/06/09 17:33:46 by lnoaille         ###   ########.fr       */
+/*   Updated: 2020/06/09 17:37:58 by lnoaille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -231,6 +231,10 @@ int main()
 	printf("	---- Return = %d ----\n", ft_printf("s%5.6ds",str));
 	printf("	---- Return = %d ----\n", printf("%12.3s", NULL));
 	printf("	---- Return = %d ----\n", ft_printf("%12.3s", NULL));
+	printf("	---- Return = %d ----\n", printf("%2.3s", NULL));
+	printf("	---- Return = %d ----\n", ft_printf("%2.3s", NULL));
+	printf("	---- Return = %d ----\n", printf("%4.3s", NULL));
+	printf("	---- Return = %d ----\n", ft_printf("%4.3s", NULL));
 
 
 
