@@ -34,7 +34,7 @@ Un exemple d'utilisation d'indicateur pourrait donner :
 
   
 ### Valeurs de retour
-Un entier positif : Le nombre de caractères affichés à l'écran.
+Un entier positif : Le nombre de caractères affichés à l'écran.  
 -1 : Erreur.  
  
 ### Fonctions autorisés 
